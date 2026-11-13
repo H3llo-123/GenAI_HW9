@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{店名}}（雷店記錄） - 個人私藏餐廳攻略</title>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="site-brand">
+        <span class="site-title"><a href="../../index.html">個人私藏餐廳攻略</a></span>
+        <span class="site-subtitle">文山區美食知識庫與實用指南</span>
+      </div>
+      <nav class="site-nav">
+        <a href="../../index.html" class="nav-link">精選推薦</a>
+        <a href="../../blacklist.html" class="nav-link active">雷店清單</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="article-container">
+    <a href="../../blacklist.html" class="back-link">&larr; 返回雷店清單</a>
+
+    <article>
+      <header class="article-header">
+        <div class="article-tag-row">
+          <span class="tag">雷店記錄</span>
+        </div>
+        <h1 class="article-title">{{店名}}</h1>
+        <div class="article-meta">
+          <span>{{行政區}}・{{商圈}}</span>
+          <span>記錄日期：{{記錄日期}}</span>
+          <span class="score"><span class="score-num">{{總分}}</span><span class="score-max"> / 5.0</span></span>
+        </div>
+      </header>
+
+      <!-- 雷點原因（使用者原話，逐字呈現，不潤飾） -->
+      <section>
+        <h2>雷點原因</h2>
+        <div class="quote-box">
+          {{使用者原話雷點原因}}
+        </div>
+      </section>
+
+      <!-- 基本情報表 -->
+      <section>
+        <h2>基本情報表</h2>
+        <table class="info-table">
+          <tbody>
+            <tr>
+              <th>店名</th>
+              <td>{{店名}}（{{英文店名}}）</td>
+            </tr>
+            <tr>
+              <th>地址</th>
+              <td>{{地址}}</td>
+            </tr>
+            <tr>
+              <th>所屬商圈</th>
+              <td>{{行政區}}・{{商圈}}</td>
+            </tr>
+            <tr>
+              <th>營業時間</th>
+              <td>{{營業時間}}</td>
+            </tr>
+            <tr>
+              <th>人均價格</th>
+              <td>{{價位區間}}（{{價位等級}}）／ 實際人均約 {{實際人均}} 元</td>
+            </tr>
+            <tr>
+              <th>料理類型</th>
+              <td>{{料理類型}}</td>
+            </tr>
+            <tr>
+              <th>用餐情境</th>
+              <td>{{用餐情境}}</td>
+            </tr>
+            <tr>
+              <th>付款方式</th>
+              <td>{{付款方式}}</td>
+            </tr>
+            <tr>
+              <th>Google Maps 連結</th>
+              <td><a href="{{GOOGLE_MAPS_URL}}" target="_blank" rel="noopener noreferrer">在 Google Maps 上查看</a></td>
+            </tr>
+            <tr>
+              <th>店家連結</th>
+              <td>{{店家連結或未確認}}</td>
+            </tr>
+            <tr>
+              <th>記錄日期</th>
+              <td>{{記錄日期}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 點過的菜色與評論（無必點標記） -->
+      <section>
+        <h2>點過的菜色與評論</h2>
+        <div class="dish-list">
+          <div class="dish-card">
+            <div class="dish-header">
+              <div class="dish-title-group">
+                <span class="dish-name">{{菜色名稱}}</span>
+              </div>
+              <span class="score"><span class="score-num">{{菜色評分}}</span><span class="score-max"> / 5.0</span></span>
+            </div>
+            <p class="dish-comment">{{使用者評論}}</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 評分總覽 -->
+      <section>
+        <h2>評分總覽</h2>
+        <div class="scores-summary-grid">
+          <div class="score-box">
+            <div class="score-label">口味評分</div>
+            <div class="score-value">{{口味評分}}</div>
+          </div>
+          <div class="score-box">
+            <div class="score-label">CP 值評分</div>
+            <div class="score-value">{{CP值評分}}</div>
+          </div>
+          <div class="score-box">
+            <div class="score-label">環境評分</div>
+            <div class="score-value">{{環境評分}}</div>
+          </div>
+          <div class="score-box total">
+            <div class="score-label">綜合總分</div>
+            <div class="score-value">{{總分}}</div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>個人私藏餐廳攻略・文山區美食知識庫</p>
+    <p>純純靜態網頁・一店一篇深度記錄</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雷店清單 - 個人私藏餐廳攻略</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="site-brand">
+        <h1 class="site-title"><a href="index.html">個人私藏餐廳攻略</a></h1>
+        <p class="site-subtitle">文山區美食知識庫與實用指南・一店一篇深度攻略</p>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">精選推薦</a>
+        <a href="blacklist.html" class="nav-link active">雷店清單</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <section class="article-header">
+      <div class="article-tag-row">
+        <span class="tag">避雷指南</span>
+      </div>
+      <h2>雷店清單</h2>
+      <p class="empty-desc">
+        本頁記錄個人踩雷不推薦的店家，記錄原因皆為用餐當次真實體驗原話呈現。與推薦清單獨立分開，每店同樣獨立成篇。
+      </p>
+    </section>
+
+    <!-- 雷店列表容器 -->
+    <div id="blacklistContainer"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>個人私藏餐廳攻略・文山區美食知識庫</p>
+    <p>純靜態網頁・一店一篇深度記錄</p>
+  </footer>
+
+  <script src="data/blacklist.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

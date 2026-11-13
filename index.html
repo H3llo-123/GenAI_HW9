@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人私藏餐廳攻略 - 文山區美食指南</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="site-brand">
+        <h1 class="site-title"><a href="index.html">個人私藏餐廳攻略</a></h1>
+        <p class="site-subtitle">文山區美食知識庫與實用指南・一店一篇深度攻略</p>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link active">精選推薦</a>
+        <a href="blacklist.html" class="nav-link">雷店清單</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <!-- 搜尋與篩選區塊 -->
+    <section class="filter-section" aria-label="搜尋與篩選條件">
+      <div class="search-box">
+        <input type="text" id="searchInput" class="search-input" placeholder="搜尋店名（中英文）、地區、菜色、標籤...">
+      </div>
+
+      <div class="filter-grid">
+        <!-- 地區第一層：行政區 -->
+        <div class="filter-group">
+          <label for="districtSelect" class="filter-label">行政區</label>
+          <select id="districtSelect" class="filter-select">
+            <option value="">全部行政區</option>
+          </select>
+        </div>
+
+        <!-- 地區第二層：商圈 -->
+        <div class="filter-group">
+          <label for="zoneSelect" class="filter-label">商圈</label>
+          <select id="zoneSelect" class="filter-select">
+            <option value="">全部商圈</option>
+          </select>
+        </div>
+
+        <!-- 排序方式 -->
+        <div class="filter-group">
+          <label for="sortSelect" class="filter-label">排序方式</label>
+          <select id="sortSelect" class="filter-select">
+            <option value="default">最新收錄（預設）</option>
+            <option value="price-asc">價位由低到高</option>
+            <option value="score-desc">評分由高到低</option>
+          </select>
+        </div>
+
+        <!-- 料理類型篩選 -->
+        <div class="filter-group filter-group-wide">
+          <span class="filter-label">料理類型（可複選）</span>
+          <div id="cuisineChips" class="filter-chips"></div>
+        </div>
+
+        <!-- 用餐情境篩選 -->
+        <div class="filter-group filter-group-wide">
+          <span class="filter-label">用餐情境（可複選）</span>
+          <div id="scenarioChips" class="filter-chips"></div>
+        </div>
+      </div>
+
+      <div class="filter-actions">
+        <span id="resultCount" class="filter-count">顯示 0 間餐廳</span>
+        <button type="button" id="clearFiltersBtn" class="btn-clear">清除條件</button>
+      </div>
+    </section>
+
+    <!-- 卡片網格 -->
+    <div id="restaurantGrid" class="cards-grid"></div>
+
+    <!-- 無符合結果／空狀態 -->
+    <div id="emptyState" class="empty-state" hidden>
+      <h2 class="empty-title">查無符合條件的餐廳</h2>
+      <p id="emptyMessage" class="empty-desc">請嘗試放寬搜尋條件或清除篩選。</p>
+      <button type="button" id="emptyResetBtn" class="btn-clear">清除所有條件</button>
+    </div>
+
+    <!-- 分頁元件（每頁 12 筆） -->
+    <nav id="pagination" class="pagination" aria-label="分頁導航" hidden>
+      <button type="button" id="prevPageBtn" class="pagination-btn">&larr; 上一頁</button>
+      <span id="pageInfo" class="pagination-info">第 1 / 1 頁</span>
+      <button type="button" id="nextPageBtn" class="pagination-btn">下一頁 &rarr;</button>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>個人私藏餐廳攻略・文山區美食知識庫</p>
+    <p>純靜態網頁・一店一篇深度記錄</p>
+  </footer>
+
+  <script src="data/taxonomy.js"></script>
+  <script src="data/restaurants.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
